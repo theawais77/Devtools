@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "API Call Tracker",
+    "version": "1.0",
+    "permissions": [
+      "downloads",
+      "storage"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "devtools_page": "devtools.html"
+  }
+  
