@@ -1,9 +1,10 @@
-document.getElementById('downloadButton').addEventListener('click', () => {
-    chrome.runtime.sendMessage({ type: "downloadLogs" }, (response) => {
-        if (response.status === "completed") {
-            console.log("Download started");
-        } else {
-            console.error("Failed to download logs");
-        }
+document.getElementById('download-har').addEventListener('click', function() {
+    chrome.runtime.sendMessage({ action: "download" }, function(response) {
+      if (response.status === "success") {
+        alert("HAR file downloaded successfully!");
+      } else {
+        alert("Failed to download HAR file.");
+      }
     });
-});
+  });
+  
